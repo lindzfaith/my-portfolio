@@ -32,7 +32,7 @@ function Project() {
                 </div>
                 <div className="project-container-links">
                     <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Github</span></a>
-                    <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Website</span></a>
+                    <a href="https://recipe-randomizer-website.vercel.app/randomizer"><span>Website</span></a>
                 </div>
             </div>
         </div>
