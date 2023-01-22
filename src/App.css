@@ -123,14 +123,57 @@ a {
   color: white;
   margin-top: 10px;
   padding: 10px;
+  margin-bottom: 15px;
   box-shadow: 1px 1px 3px black;
   background-color: var(--blue-color);
 }
 
-.skill-title {
+.header-dropdown {
   text-align: center;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+}
+
+.dropdown {
   font-size: 30px;
-  padding-bottom: 10px;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+
+.dropdown-button {
+  font-size: 30px;
+  text-align: center;
+  height: 100%;
+  background-color: white;
+  width: 33%;
+  opacity: 0;
+  padding: 5px;
+}
+
+.dropdown-show {
+  font-size: 30px;
+  display: inline-block;
+  background-color: white;
+  width: 33%;
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+  height: 100%;
+  opacity: 1;
+}
+
+@keyframes opacity-change {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+.skill-container h2 {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 20px;
 }
 
 .skill-title:not(first-child) {
@@ -204,19 +247,6 @@ a {
   100% {box-shadow: 1px 1px 1px 1px var(--yellow-color);}
 }
 
-.dropdown {
-  font-size: 20px;
-  height: 60%;
-  margin-top: 2.5%;
-  margin-right: 1%;
-  background-color: black;
-  color: var(--blue-color);
-  float:right;
-}
-option:first-child {
-  display:none;
-}
-
 .about-me-container {
   text-align: center;
   width: 95%;
@@ -256,6 +286,42 @@ option:first-child {
   margin-bottom: 5px;
 }
 
+.projects-container {
+  width: 80%;
+  height: 100%;
+  min-height: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.project-container {
+  margin: 30px;
+  width: 100%;
+  border: 3px solid var(--blue-color);
+  background-color: rgb(225, 247, 255);
+  font-size: 20px;
+  border-radius: 3%;
+  max-height: 33%;
+  padding: 5px;
+  float: left;
+}
+
+.project-container:hover {
+  transform: scale(1.05);
+}
+
+.project-container span {
+  justify-content: space-evenly;
+  padding-right: 10px;
+  font-weight: 800;
+}
+
+.project-container h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .header-links {
       display: none;
@@ -285,26 +351,50 @@ option:first-child {
   .fixed-cat {
     animation: none;
     left: 50%;
+    opacity: 0;
   }
-  .about-me-container li {
+  .about-me-container .row li {
     text-align: left;
     font-size: 30px;
-    margin-right: 38%;
   }
   .about-me-container .row h1 {
-    font-size: 90px;
+    font-size: 100px;
   }
   .about-me-container .row h2 {
-    text-align: left;
+    text-align: center;
     margin: 10px 0 10px 0;
+    font-weight: 200;
   }
   .skill-container {
     width: 100%;
     margin: 0;
+    padding: 0;
+  }
+  .skill {
+    width: 40%;
+  }
+  .header-dropdown {
+    opacity: 1;
+  }
+  .dropdown-button {
+    opacity: 1;
+  }
+  .project-container {
+    padding: 0;
+    margin-right: 0;
+    margin-left: 5%;
+    margin-bottom: 2.5%;
+    width: 90%;
+  }
+  .projects-container {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
   .hero-banner-container h1{
     white-space: normal;
   }
@@ -312,11 +402,40 @@ option:first-child {
     text-align: left;
     font-size: 26px;
   }
+  .about-me-container .row h1 {
+    font-size: 100px;
+  }
+  .skill-container h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .about-me-container li {
+    text-align: left;
+    font-size: 24px;
+  }
+  .about-me-container .row h1 {
+    font-size: 100px;
+  }
+  .skill-container h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .skill {
+    width: 100%;
+  }
+  .skill-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .dropdown {
-      display: none;
+      opacity: 0;
   }
 }
 

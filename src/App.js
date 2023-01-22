@@ -1,5 +1,5 @@
 import './App.css';
-import {HeroBanner, AboutMe, Cat, FixedCat, Skills} from './components';
+import {HeroBanner, AboutMe, Cat, FixedCat, Skills, Project} from './components';
 
 const isHome = () => {
   if (window.location.pathname === "/") {
@@ -30,12 +30,22 @@ const isAbout = () => {
   }
 }
 
+const isProjects = () => {
+  if (window.location.pathname === "/projects") {
+    return (<div>
+        <Project/> 
+        <FixedCat/>
+      </div>);
+  }
+}
+
 function App() {
   return (
     <div>
       {isHome()}
       {isAbout()}
       {isSkills()}
+      {isProjects()}
     </div>
   );
 }
