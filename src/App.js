@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import {HeroBanner, AboutMe, Cat, FixedCat, Skills} from './components';
+
+const isHome = () => {
+  if (window.location.pathname === "/") {
+    return (<div>
+      <HeroBanner/>
+      <Cat/>
+    </div>
+      );
+  }
+}
+
+const isSkills = () => {
+  if (window.location.pathname === "/skills") {
+    return (<div>
+      <Skills/>
+      <FixedCat/>
+    </div>
+      );
+  }
+}
+
+const isAbout = () => {
+  if (window.location.pathname === "/about") {
+    return (<div>
+        <AboutMe/> 
+        <FixedCat/>
+      </div>);
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {isHome()}
+      {isAbout()}
+      {isSkills()}
     </div>
   );
 }

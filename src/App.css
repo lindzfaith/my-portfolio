@@ -1,38 +1,395 @@
-.App {
+:root {
+  --blue-color: #81d7f1;
+  --yellow-color: #f1ef81;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--yellow-color);
+  box-shadow: 4px;
+  text-align: center;
+  padding: 7px 0px 5px 0px;
+  position: sticky;
+}
+
+.header-links {
+  font-size: 30px;
+  padding: 5px;
+  padding-top: 10px;
+  margin-right: 80px;
+  display: inline-block;
+}
+
+.header-links:not(:last-child) {
+  margin-right: 0;
+}
+
+.header-links:hover {
+  transform: scale(120%);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero-banner-container {
+  width: 80%;
+  height: 100%;
+  min-height: 600px;
+  margin: auto;
+  display: block;
+  justify-content: center;
+}
+
+.hero-banner-container h1 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0px;
+  white-space: nowrap;
+  margin-top: 140px;
+}
+
+.hero-banner-container h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0px;
+  word-spacing: 0.3rem;
+}
+
+.background-cat {
+  bottom: 0;
+  position: fixed;
+  left: 60%;
+  transform: scale(75%);
+  animation: 12s linear moving;
+}
+
+.fish {
+  bottom: 0;
+  position: fixed;
+  opacity: 0;
+  left: 60%;
+  margin-bottom: 15px;
+  animation: 24s infinite fish;
+}
+
+.cat-container {
+  right: 0%;
+  left: 0;
+  bottom: 0;
+  margin-top: 90px;
+  width: 100%;
+  position: fixed;
+}
+
+.fixed-cat {
+  bottom: 0;
+  position: fixed;
+  left: 60%;
+  transform: scale(75%);
+}
+
+.meow {
+  position: fixed;
+  font-size: 30px;
+  bottom: 17%;
+  right: 37%;
+  opacity: 0;
+  animation: 18s infinite meow;
+}
+
+.on-hover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.skill-container {
+  float: left;
+  margin: 30px;
+  width: 40%;
+  padding: 10px;
+}
+
+.skill {
+  width: 40%;
+  margin: 5px;
+  display: block;
+  float: left;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px black;
+  background-color: var(--blue-color);
+}
+
+.skill-title {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.skill-title:not(first-child) {
+  padding: 30px 0px 20px 0px;
+  margin-top: 10px;
+}
+
+.skill-name {
+  padding: 0;
+  text-shadow: 1px 1px 1px black;
+  font-size: 30px;
+}
+
+.skill-description {
+  color: black;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 0;
+  position: relative;
+  display: none;
+}
+
+.skill:hover .skill-description {
+  display:block;
+}
+
+.skill:hover .skill-name {
+  display: none;
+}
+
+.name {
+  animation: 8s linear typing;
+  overflow: hidden;
+  word-spacing: 0.2rem;
+  position:relative;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes typing {
+  0% {color: white;}
+  25% {color: rgb(73, 73, 73); text-shadow: 1px black;}
+  50% {color: rgb(15, 15, 15);}
+  75% {color: rgb(0, 0, 0);}
+  99% {display: none;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  float: left;
+  width: 55%;
+}
+.image {
+  position: absolute;
+  top: 80px;
+  left: 35%;
+  margin: auto;
+  width: 30%;
+  border-radius: 100%;
+  box-shadow: 1px 3px 4px 3px rgb(204, 204, 204);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.image:hover {
+  animation: 5s linear shadows;
+}
+
+@keyframes shadows {
+  0% {box-shadow: 3px 1px 1px 1px rgb(94, 176, 253);}
+  20% {box-shadow: 1px 3px 1px 1px var(--blue-color);}
+  35% {box-shadow: 1px 1px 3px 1px rgb(171, 253, 94);}
+  50% {box-shadow: 1px 1px 1px 3px rgb(253, 250, 94);}
+  90% {box-shadow: 1px 1px 1px 8px var(--yellow-color);}
+  100% {box-shadow: 1px 1px 1px 1px var(--yellow-color);}
+}
+
+.dropdown {
+  font-size: 20px;
+  height: 60%;
+  margin-top: 2.5%;
+  margin-right: 1%;
+  background-color: black;
+  color: var(--blue-color);
+  float:right;
+}
+option:first-child {
+  display:none;
+}
+
+.about-me-container {
+  text-align: center;
+  width: 95%;
+  margin: 0;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px 0px 50px 0px;
+  min-height: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.about-me-container li {
+  text-align: left;
+  font-size: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about-me-container ul {
+  display: inline-block;
+  margin-bottom: 75px;
+}
+
+.about-me-container .row {
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+
+.about-me-container .row h1 {
+  font-size: 120px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.about-me-container .row h2 {
+  padding-left: 40px;
+  font-size: 50px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .header-links {
+      display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .row {
+    width: 100%;
   }
+  .image {
+    width: 90%;
+    left: 5%;
+  }
+  .hero-banner-container h1{
+    font-size: 80px;
+  }
+  .hero-banner-container h2{
+    font-size: 50px;
+  }
+  .about-me-container .row {
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+  }
+  .background-cat {
+    animation: none;
+    left: 50%;
+  }
+  .fixed-cat {
+    animation: none;
+    left: 50%;
+  }
+  .about-me-container li {
+    text-align: left;
+    font-size: 30px;
+    margin-right: 38%;
+  }
+  .about-me-container .row h1 {
+    font-size: 90px;
+  }
+  .about-me-container .row h2 {
+    text-align: left;
+    margin: 10px 0 10px 0;
+  }
+  .skill-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .hero-banner-container h1{
+    white-space: normal;
+  }
+  .about-me-container li {
+    text-align: left;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .dropdown {
+      display: none;
+  }
+}
+
+.image-container {
+  width: 300px;
+}
+
+.cat {
+  position: absolute;
+  width: 300px;
+  animation: 10s infinite image-switch-one;
+}
+
+.selfie {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  animation: 10s infinite image-switch-two;
+}
+
+.pizza {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  animation: 10s infinite image-switch-three;
+}
+
+@keyframes moving {
+  0% {transform: scale(0.75);}
+  45.5% {left: 10%; transform: scale(0.75, 0.75);}
+  50.5% {left: 10%; transform: scale(-0.75, 0.75);}
+  75% {left: 30%; transform: scale(-0.75, 0.75);}
+  95% {left: 55%; transform: scale(-0.75, 0.75);}
+  100% {right: 60%; transform: scale(0.75, 0.75);}
+}
+
+@keyframes fish {
+  50% {opacity: 0;}
+  51% {opacity: 1;}
+  52% {opacity: 1; transform: scale(1, 1);}
+  100% {opacity: 1; transform: scale(-1, 1);}
+  60% {transform: scale(1, 1);}
+  70% {opacity: 1; transform: scale(-1, 1);}
+  80% {transform: scale(1, 1);}
+  90% {opacity: 1; transform: scale(-1, 1);}
+}
+
+@keyframes meow {
+  65% {opacity: 0;}
+  80% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@keyframes image-switch-one {
+  0% {visibility: hidden}
+  25% {visibility: visible;}
+  50% {visibility: hidden;}
+  75% {visibility: hidden;}
+  100% {visibility: hidden;}
+}
+
+@keyframes image-switch-two {
+  0% {visibility: hidden}
+  25% {visibility: hidden;}
+  50% {visibility: visible;}
+  75% {visibility: hidden;}
+  100% {visibility: hidden;}
+}
+
+@keyframes image-switch-three {
+  0% {visibility: hidden}
+  25% {visibility: hidden;}
+  50% {visibility: hidden;}
+  75% {visibility: visible;}
+  100% {visibility: hidden;}
 }
