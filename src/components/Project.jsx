@@ -12,8 +12,12 @@ function Project() {
                     liking, and replying to posts.
                     </li>
                 </ul>
-                <p>Stack: Spring Boot, Java, MySQL, Angular, JavaScript, HTML, CSS </p>
-                <a href="https://github.com/lindzfaith/social-media-application"><span>Github</span></a>
+                <div className="stack">
+                    <p>Stack: Spring Boot, Java, MySQL, Angular, JavaScript, HTML, CSS </p>
+                </div>
+                <div className="project-container-links">
+                    <a href="https://github.com/lindzfaith/social-media-application"><span>Github</span></a>
+                </div>
             </div>
             <div className="project-container">
                 <img alt="Recipe Randomizer page" width="100%" src={require("./RecipeRandomizer.png")}/>
@@ -23,9 +27,13 @@ function Project() {
                     <li>Created a website that randomly returns a recipe to the user based on their meal selection.
                     </li>
                 </ul>
-                <p>Stack: JavaScript, React, HTML, CSS </p>
-                <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Github</span></a>
-                <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Website</span></a>
+                <div className="stack">
+                    <p>Stack: React, JavaScript, HTML, CSS </p>
+                </div>
+                <div className="project-container-links">
+                    <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Github</span></a>
+                    <a href="https://github.com/lindzfaith/recipe-randomizer-website"><span>Website</span></a>
+                </div>
             </div>
         </div>
     );

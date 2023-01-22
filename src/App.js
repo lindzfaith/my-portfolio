@@ -1,5 +1,5 @@
 import './App.css';
-import {HeroBanner, AboutMe, Cat, FixedCat, Skills, Project} from './components';
+import {HeroBanner, AboutMe, Cat, FixedCat, WalkAwayCat, Skills, Project, Footer} from './components';
 
 const isHome = () => {
   if (window.location.pathname === "/") {
@@ -16,6 +16,7 @@ const isSkills = () => {
     return (<div>
       <Skills/>
       <FixedCat/>
+      <Footer/>
     </div>
       );
   }
@@ -26,6 +27,7 @@ const isAbout = () => {
     return (<div>
         <AboutMe/> 
         <FixedCat/>
+        <Footer/>
       </div>);
   }
 }
@@ -34,7 +36,8 @@ const isProjects = () => {
   if (window.location.pathname === "/projects") {
     return (<div>
         <Project/> 
-        <FixedCat/>
+        <WalkAwayCat/>
+        <Footer/>
       </div>);
   }
 }
