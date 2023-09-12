@@ -18,12 +18,15 @@
   box-shadow: 4px;
   text-align: center;
   padding: 7px 0px 5px 0px;
-  position: sticky;
+  position: relative;
   bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons {
-  position: relative;
+  position: sticky;
   width: 100%;
   align-items: center;
   text-align: center;
@@ -326,22 +329,20 @@ a {
 }
 
 .projects-container {
-  width: 80%;
-  height: 100%;
-  min-height: 600px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .project-container {
-  margin: 30px;
-  width: 100%;
+  margin: 2% 2% 1% 4%;
+  width: 40%;
   border: 3px solid var(--blue-color);
   background-color: rgb(225, 247, 255);
   font-size: 20px;
   border-radius: 3%;
-  max-height: 33%;
+  height: 600px;
   padding: 5px;
   float: left;
 }

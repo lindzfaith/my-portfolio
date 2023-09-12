@@ -7,13 +7,18 @@ function Skills() {
                 <h2 className="skill-title">Programming</h2>
                 <br/>
                 <div className="skill">
-                    <span className="skill-name">Java</span>
+                    <span className="skill-name">JavaScript</span>
                     <label className="skill-description">Proficient</label>
                     <br/>
                 </div>
                 <div className="skill">
-                    <span className="skill-name">JavaScript</span>
-                    <label className="skill-description">Familiar</label>
+                    <span className="skill-name">TypeScript</span>
+                    <label className="skill-description">Proficient</label>
+                    <br/>
+                </div>
+                <div className="skill">
+                    <span className="skill-name">Java</span>
+                    <label className="skill-description">Proficient</label>
                     <br/>
                 </div>
                 <div className="skill">
@@ -26,6 +31,11 @@ function Skills() {
                     <label className="skill-description">Familiar</label>
                     <br/>
                 </div>
+                <div className="skill">
+                    <span className="skill-name">C++</span>
+                    <label className="skill-description">Familiar</label>
+                    <br/>
+                </div>
                 <h2 className="skill-title">Web & Database</h2>
                 <br/>
                 <div className="skill">
@@ -35,7 +45,7 @@ function Skills() {
                 </div>
                 <div className="skill">
                     <span className="skill-name">CSS</span>
-                    <label className="skill-description">Familiar</label>
+                    <label className="skill-description">Proficient</label>
                     <br/>
                 </div>
                 <div className="skill">
@@ -54,7 +64,7 @@ function Skills() {
                 </div>
                 <div className="skill">
                     <span className="skill-name">React</span>
-                    <label className="skill-description">Familiar</label>
+                    <label className="skill-description">Proficient</label>
                     <br/>
                 </div>
                 <h2 className="skill-title">Tools/Cloud</h2>
