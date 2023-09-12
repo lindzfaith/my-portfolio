@@ -10,6 +10,9 @@
   text-align: center;
   padding: 7px 0px 5px 0px;
   position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer {
@@ -43,9 +46,6 @@
 .header-links {
   font-size: 30px;
   padding: 5px;
-  padding-top: 10px;
-  margin-right: 80px;
-  display: inline-block;
 }
 
 .header-links:not(:last-child) {
@@ -451,6 +451,10 @@ a {
     padding: 0;
     margin: 0;
     width: 100%;
+  }
+  .header {
+    display: inline-block;
+    z-index: 1;
   }
 }
 
