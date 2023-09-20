@@ -387,6 +387,15 @@ a {
   text-align: center;
 }
 
+.project-container img {
+  width: 100%;
+}
+
+.image-container {
+  height: 50%;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 800px) {
   .about-me-container ul {
     margin: 15px 0 0 0;

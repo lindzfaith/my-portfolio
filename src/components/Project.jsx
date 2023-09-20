@@ -4,6 +4,24 @@ function Project() {
     return (
         <div className="projects-container"> 
             <div className="project-container">
+                <div className="image-container">
+                    <img alt="Task Manager Application" width="100%" src={require("./TaskManager.png")}/>
+                </div>
+                <h2>Task Manager Application</h2>
+                <p>September 2023</p>
+                <ul>
+                    <li>Created a web application that uses CRUD operations for creating,
+                    editing, and delete tasks from multiple task lists.
+                    </li>
+                </ul>
+                <div className="stack">
+                    <p>Stack: React, JavaScript, HTML, CSS </p>
+                </div>
+                <div className="project-container-links">
+                    <a href="https://github.com/lindzfaith/task-management-app"><span>Github</span></a>
+                </div>
+            </div>
+            <div className="project-container">
                 <img alt="Social Media App" width="100%" src={require("./SocialMedia.png")}/>
                 <h2>Social Media Application</h2>
                 <p>January 2023</p>
